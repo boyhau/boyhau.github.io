@@ -79,3 +79,7 @@ function submit() {
     }
   }
 }
+
+function initialise() {
+  location.reload()
+}
