@@ -9,6 +9,10 @@ var individual_words = [
   "fruit",
 ];
 
+function initialise() {
+  location.reload()
+}
+
 var a = Math.floor(Math.random() * individual_words.length)
 var secret_word = individual_words[a]
 
@@ -69,9 +73,11 @@ function submit() {
   if (True_or_Flase) {
     document.getElementById("p1").innerHTML = secret_word
     document.getElementById("p4").innerHTML = "你赢了！神秘单词是：" + secret_word;
+    setTimeout(initialise, 10000);
   } else {
     if (lives == 0) {
       document.getElementById("p4").innerHTML = "你输了，神秘单词是：" + secret_word
+      setTimeout(initialise, 10000);
     } else if(secret_word.indexOf(guess) != -1){
       document.getElementById("p4").innerHTML = "猜对了！";
     }else{
@@ -80,6 +86,3 @@ function submit() {
   }
 }
 
-function initialise() {
-  location.reload()
-}
