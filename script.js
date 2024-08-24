@@ -3,10 +3,11 @@ var individual_words = [
   "apple",
   "table",
   "phone",
-  "doggy",
   "green",
-  "books",
   "fruit",
+  "elephant",
+  "umbrella",
+  "study"
 ];
 
 function initialise() {
@@ -73,11 +74,11 @@ function submit() {
   if (True_or_Flase) {
     document.getElementById("p1").innerHTML = secret_word
     document.getElementById("p4").innerHTML = "你赢了！神秘单词是：" + secret_word;
-    setTimeout(initialise, 10000);
+    setTimeout(initialise, 8000);
   } else {
     if (lives == 0) {
       document.getElementById("p4").innerHTML = "你输了，神秘单词是：" + secret_word
-      setTimeout(initialise, 10000);
+      setTimeout(initialise, 8000);
     } else if(secret_word.indexOf(guess) != -1){
       document.getElementById("p4").innerHTML = "猜对了！";
     }else{
@@ -85,4 +86,3 @@ function submit() {
     }
   }
 }
-
