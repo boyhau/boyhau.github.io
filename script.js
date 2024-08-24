@@ -11,7 +11,7 @@ var individual_words = [
 ];
 
 function initialise() {
-  location.reload()
+  history.go(0) 
 }
 
 var a = Math.floor(Math.random() * individual_words.length)
